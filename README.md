@@ -1,16 +1,45 @@
-# React + Vite
+# Timer Challenge Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based timer challenge game where players race against the clock to stop timers as close to the target time as possible without letting them expire.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Multiple timer challenges with different difficulty levels (1s, 5s, 10s)
+- Score calculation based on remaining time
+- Player name input
+- Start/Stop timer functionality
+- Modal dialog for results display
+- Reset functionality
 
-## React Compiler
+## How to Play
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Enter your player name
+2. Click "Start Challenge" for any timer
+3. Try to stop the timer as close to 0 as possible
+4. Your score is calculated based on how much time remains
+5. If the timer expires (reaches 0), you lose!
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (useState, useRef)
+- Portals (for modal rendering)
+- JavaScript intervals (setInterval/clearInterval)
+
+## State Management Concepts
+
+- **useState** for player name and time tracking
+- **useRef** for timer IDs and modal reference
+- **Immutability** - proper state updates without mutations
+- **Derived state** for active timer detection
+
+## What I Learned
+
+- Managing intervals with refs
+- Using portals for modal dialogs
+- Proper interval cleanup
+- Score calculation logic
+- State management patterns in React
+
+---
+
+Built as part of React learning journey - practicing state management and refs.
