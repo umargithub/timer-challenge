@@ -1,13 +1,14 @@
-import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Challenge from "./components/Challenge";
+import Player from "./components/Player";
 
 function App() {
   return (
     <>
+      <Header />
       <div className="container">
-        <Header />
+        <Player />
 
         <div className="challenges-grid">
           <Challenge title="EASY" time={1} />
